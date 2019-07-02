@@ -1,11 +1,14 @@
 # speaker-recognizer-gmm
 
+# How to run
+
+- app.py = flask run
 
 # Libraries to Install
 
 - Python Speech Features( in Anaconda conda install -c contango python_speech_features / pip install python_speech_features
 )
-
+- Flask
 # Phrases for test
 
 - A glória é fugaz, mas a obscuridade dura para sempre.

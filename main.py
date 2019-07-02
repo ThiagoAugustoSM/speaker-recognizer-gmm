@@ -61,9 +61,21 @@ class Main:
         scores = np.array(gmm.score(vector))
         log_likelihood[i] = scores.sum()
 
+      print(log_likelihood)
       winner = np.argmax(log_likelihood)
-      print('Winner was: ', self.gmmModelsFiles[winner].split('.')[0])
+      print(filePath, ' winner was: ', self.gmmModelsFiles[winner].split('.')[0]) 
+  
+  def evaluateFile(self, fileName):
+    vector = self.extractFeatures(self.source + 'teste/' + fileName)
+    log_likelihood = np.zeros(len(self.gmmModels))
+    for i in range(len(self.gmmModels)):
+      gmm    = self.gmmModels[i]  #checking with each model one by one
+      scores = np.array(gmm.score(vector))
+      log_likelihood[i] = scores.sum()
 
+    winner = np.argmax(log_likelihood)
+    print(fileName, ' winner was: ', self.gmmModelsFiles[winner].split('.')[0]) 
+    return winner
 
 main = Main()
 
