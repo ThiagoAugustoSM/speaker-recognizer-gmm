@@ -9,6 +9,8 @@
 - Python Speech Features( in Anaconda conda install -c contango python_speech_features / pip install python_speech_features
 )
 - Flask
+- from flask_cors import CORS
+
 # Phrases for test
 
 - A glória é fugaz, mas a obscuridade dura para sempre.
